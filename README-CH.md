@@ -336,9 +336,10 @@ arrayGcd([4,8,12]) // 4
 
 ### arrayLcm
 
-Calculates the lowest common multiple (lcm) of an array of numbers.
+计算数组最小公倍数
 
-Use `Array.reduce()` and the `lcm` formula (uses recursion) to calculate the lowest common multiple of an array of numbers.
+使用`Array.reduce()`，每次计算出的lcm为累加器的结果，参与下次计算；与计算数组GCD类似
+> `Array.reduce()`对累加器和数组中每个元素应用一个函数，结果为最后一个值
 
 ```js
 const arrayLcm = arr => {
@@ -357,9 +358,10 @@ arrayLcm([4,8,12]) // 24
 
 ### arrayMax
 
-Returns the maximum value in an array.
+返回数组中最大值；也可以使用`reduce()`做
+这里面则用到`...`展开运算符
 
-Use `Math.max()` combined with the spread operator (`...`) to get the maximum value in the array.
+> `spead operator`允许一个表达式在期望多个参数（用于函数调用）或多个元素（用于数组字面量）或多个变量（用于解构赋值）的位置扩展
 
 ```js
 const arrayMax = arr => Math.max(...arr);
@@ -373,9 +375,10 @@ arrayMax([10, 1, 5]) // 10
 
 ### arrayMin
 
-Returns the minimum value in an array.
+返回数组中最小值；也可以使用`reduce()`做
+这里面则用到`...`展开运算符
 
-Use `Math.min()` combined with the spread operator (`...`) to get the minimum value in the array.
+> `spead operator`允许一个表达式在期望多个参数（用于函数调用）或多个元素（用于数组字面量）或多个变量（用于解构赋值）的位置扩展
 
 ```js
 const arrayMin = arr => Math.min(...arr);
