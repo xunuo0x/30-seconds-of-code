@@ -1,8 +1,9 @@
 ### arrayLcm
 
-Calculates the lowest common multiple (lcm) of an array of numbers.
+计算数组最小公倍数
 
-Use `Array.reduce()` and the `lcm` formula (uses recursion) to calculate the lowest common multiple of an array of numbers.
+使用`Array.reduce()`，每次计算出的lcm为累加器的结果，参与下次计算；与计算数组GCD类似
+> `Array.reduce()`对累加器和数组中每个元素应用一个函数，结果为最后一个值
 
 ```js
 const arrayLcm = arr => {

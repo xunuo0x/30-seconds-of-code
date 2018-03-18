@@ -1,8 +1,8 @@
 ### arrayMax
 
-Returns the maximum value in an array.
-
-Use `Math.max()` combined with the spread operator (`...`) to get the maximum value in the array.
+返回数组中最大值；也可以使用`reduce()`做
+这里面则用到`...`展开运算符
+> `spead operator`允许一个表达式在期望多个参数（用于函数调用）或多个元素（用于数组字面量）或多个变量（用于解构赋值）的位置扩展
 
 ```js
 const arrayMax = arr => Math.max(...arr);

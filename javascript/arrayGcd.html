@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>arrayGcd</title>
+</head>
+<body>
+  <script>
+    const arrayGcd = (arr) => {
+      // 计算gcd放在整个 数组gcd 中更合适
+      const gcd = (x, y) => !y ? x : gcd(y, x % y)
+      return arr.reduce((a, b) => gcd(a, b))
+    }
+    console.log(arrayGcd([4,8,12]))
+  </script>
+</body>
+</html>

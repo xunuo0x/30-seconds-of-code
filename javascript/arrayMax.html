@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ArrayMax</title>
+</head>
+<body>
+  <script>
+    const arrayMax = arr => {
+      return Math.max(...arr)
+    }
+    const arrayMax2 = arr => {
+      return arr.reduce((max, item) => max > item ? max : item)
+    }
+    console.log(arrayMax([1,4,2,7,2]))
+    console.log(arrayMax2([1,4,2,7,12]))
+  </script>
+</body>
+</html>

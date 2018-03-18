@@ -301,13 +301,24 @@ arrayMax([1,2,4])  // 4
 ```
 
 [⬆ back to top](#table-of-contents)
+
 ## Array
 
 ### arrayGcd
 
-Calculates the greatest common denominator (gcd) of an array of numbers.
+计算数组的最大公约数（GCD）
 
-Use `Array.reduce()` and the `gcd` formula (uses recursion) to calculate the greatest common denominator of an array of numbers.
+采用`Array.reduce()`方法，每次调用`gcd`方法（递归），将结果作为下次调用`gcd`的初始值
+
+`Array.reduce()`的参数
+
+- callback
+  - accumulator 累加器
+  - currentValue 当前值
+  - currentIndex > 可选
+  - array > 可选
+
+- initialValue > 可选
 
 ```js
 const arrayGcd = arr => {
