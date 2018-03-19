@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>difference</title>
+</head>
+<body>
+  <script>
+    const difference = (a, b) => {
+      let s = new Set(b)
+      return a.filter((item) => {
+        return !s.has(item)
+      })
+    }
+    const difference2 = (a, b) => {
+      let s = new Set(b)
+      return a.map((item) => {
+        return !s.has(item) ? item : null
+      })
+    }
+    console.log(difference([1,2,3], [1,2,4]))
+  </script>
+</body>
+</html>

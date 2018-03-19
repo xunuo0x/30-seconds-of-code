@@ -1,6 +1,6 @@
 ### deepFlatten
 
-Deep flattens an array.
+将多维数组转为一维数组
 
 Use recursion.
 Use `Array.concat()` with an empty array (`[]`) and the spread operator (`...`) to flatten an array.

@@ -1,6 +1,6 @@
 ### differenceWith
 
-Filters out all values from an array for which the comparator function does not return `true`.
+传入比较函数和两个数组，实现取异
 
 Use `Array.filter()` and `Array.find()` to find the appropriate values.
 
