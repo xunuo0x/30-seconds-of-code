@@ -1,8 +1,7 @@
 ### distinctValuesOfArray
 
-Returns all the distinct values of an array.
-
-Use ES6 `Set` and the `...rest` operator to discard all duplicated values.
+- 数组去重，采用`Set`以及`...rest`剩余运算符去重。
+- 也可以采用`Map`去重。
 
 ```js
 const distinctValuesOfArray = arr => [...new Set(arr)];

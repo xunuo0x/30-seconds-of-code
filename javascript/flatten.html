@@ -4,17 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>deepFlatten</title>
+  <title>flatten</title>
 </head>
 <body>
   <script>
-    const deepFlatten = arr => {
-      return [].concat(...arr.map( (item) => {
-        return !Array.isArray(item) ? item : deepFlatten(item)
-        }))
+    const flatten = function (arr) {
+      return [].concat(...arr)
     }
-    let arr = [1,[2],[[3],4],5]
-    console.log(deepFlatten(arr))
+    console.log(flatten([1, 2, [3, 4], 5]))
   </script>
 </body>
 </html>

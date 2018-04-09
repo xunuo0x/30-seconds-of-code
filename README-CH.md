@@ -493,7 +493,7 @@ differenceWith([1, 1.2, 1.5, 3], [1.9, 3], (a,b) => Math.round(a) == Math.round(
 
 ### distinctValuesOfArray
 
-Returns all the distinct values of an array.
+数组去重，使用`Set`元素独一无二或`Map`hash
 
 Use ES6 `Set` and the `...rest` operator to discard all duplicated values.
 
@@ -509,6 +509,7 @@ distinctValuesOfArray([1,2,2,3,4,4,5]) // [1,2,3,4,5]
 
 ### dropElements
 
+移除函数中的元素直至测试函数返回true，返回值为剩下的值。
 Removes elements in an array until the passed function returns `true`. Returns the remaining elements in the array.
 
 Loop through the array, using `Array.slice()` to drop the first element of the array until the returned value from the function is `true`.
@@ -529,6 +530,9 @@ dropElements([1, 2, 3, 4], n => n >= 3) // [3,4]
 
 ### dropRight
 
+- 从右边删除`n`个元素
+- `Array.prototype.slice()`位置为负数时，从后往前数
+
 Returns a new array with `n` elements removed from the right.
 
 Use `Array.slice()` to slice the remove the specified number of elements from the right.
@@ -547,6 +551,8 @@ dropRight([1,2,3], 42) // []
 
 ### everyNth
 
+- 取模（mod）即可，采用`Array.prototype.filter()`进行过滤返回数组
+
 Returns every nth element in an array.
 
 Use `Array.filter()` to create a new array that contains every nth element of a given array.
@@ -563,6 +569,9 @@ everyNth([1,2,3,4,5,6], 2) // [ 2, 4, 6 ]
 
 ### filterNonUnique
 
+- 考虑到对数组进行过滤，会采用`Array.prototype.filter()`。
+- 数字不唯一，说明`indexOf()`和`lastIndexOf()`返回值不同。
+
 Filters out the non-unique values in an array.
 
 Use `Array.filter()` for an array containing only the unique values.
@@ -578,6 +587,8 @@ filterNonUnique([1,2,2,3,4,4,5]) // [1,3,5]
 [⬆ back to top](#table-of-contents)
 
 ### flatten
+
+展开数组，子元素为数组。相对于`deepFlatten()`较为容易。
 
 Flattens an array.
 

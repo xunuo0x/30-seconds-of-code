@@ -4,17 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>deepFlatten</title>
+  <title>filterNonUnique</title>
 </head>
 <body>
   <script>
-    const deepFlatten = arr => {
-      return [].concat(...arr.map( (item) => {
-        return !Array.isArray(item) ? item : deepFlatten(item)
-        }))
+    const filterNonUnique = function(arr) {
+      return arr.filter((item) => {
+        return arr.indexOf(item) === arr.lastIndexOf(item)
+      })
     }
-    let arr = [1,[2],[[3],4],5]
-    console.log(deepFlatten(arr))
+    console.log(filterNonUnique([1,2,2,3,4,4,5]))
   </script>
 </body>
 </html>
